@@ -1,0 +1,42 @@
+<isdecorate template="common/layout/page">
+	<isscript>
+	    var assets = require('*/cartridge/scripts/assets.js');
+	    assets.addCss('/css/login.css');
+	    assets.addJs('/js/newsletter.js');
+	</isscript>
+    <div class="row justify-content-center equal-height">
+    	<div class="col-sm-8 col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="login-form-nav">
+						<form action="${pdict.actionUrl}" method="POST" class="newsletter-form" <isprint value="${pdict.newsletterForm.attributes}" encoding="off" />>
+						    <div class="form-group required">
+						        <label class="form-control-label">
+						            <isprint value="${pdict.newsletterForm.fname.label}" encoding="htmlcontent" />
+						        </label>
+						        <input type="input" class="form-control" id="newsletter-form-fname" <isprint value="${pdict.newsletterForm.fname.attributes}" encoding="off" />>
+						        <div class="invalid-feedback"></div>
+						    </div>
+						    <div class="form-group required">
+								<label class="form-control-label">
+						            <isprint value="${pdict.newsletterForm.lname.label}" encoding="htmlcontent" />
+						        </label>
+						        <input type="input" class="form-control" id="newsletter-form-lname" <isprint value="${pdict.newsletterForm.lname.attributes}" encoding="off" />>
+						        <div class="invalid-feedback"></div>
+						    </div>
+						    <div class="form-group required">
+								<label class="form-control-label">
+						            <isprint value="${pdict.newsletterForm.email.label}" encoding="htmlcontent" />
+						        </label>
+						        <input type="input" class="form-control" id="newsletter-form-email" <isprint value="${pdict.newsletterForm.email.attributes}" encoding="off" /> >
+						        <div class="invalid-feedback"></div>
+						    </div>
+						    <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
+	   						<button type="submit" class="btn btn-block btn-primary">${Resource.msg('button.form.emailsignup', 'homePage', null)}</button>
+						</form>    
+	            	</div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</isdecorate>

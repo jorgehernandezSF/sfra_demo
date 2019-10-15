@@ -1,0 +1,49 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/js/productTile.js');
+        assets.addCss('/css/homePage.css');
+    </isscript>
+
+	Demo 1: <p>${pdict.demo1}</p>
+	Demo 2: <p>${pdict.demo2}</p>
+
+    <!-- +1.888.555.0199 --><!--This phone is a requirement to support existing Gomez monitor of SiteGenesis. Demadware customers can remove this.-->
+    <div class="home-main homepage">
+        <isslot id="home-main-m" description="Main home page slot." context="global" />
+    </div>
+
+    <div class="container home-categories homepage">
+        <div class="row home-main-categories no-gutters">
+            <isslot id="home-categories-m" description="Categories slots on the home page." context="global" />
+        </div>
+    </div>
+
+    <div class="container home-product-tiles homepage">
+        <div class="hp-product-grid" itemtype="http://schema.org/SomeProducts" itemid="#product">
+            <isslot id="home-products-m" description="Product tiles on the home page." context="global" />
+        </div>
+    </div>
+
+    <div class="homepage shop-the-style">
+        <isslot id="home-product-set-m" description="Link to a Product Set." context="global" />
+    </div>
+    <div class="home-email-signup">
+        <div class="container">
+            <form role="form">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="hpEmailSignUp" placeholder="${Resource.msg('placeholdertext.form.emailsignup', 'homePage', null)}" aria-label="${Resource.msg('placeholdertext.form.emailsignup', 'homePage', null)}">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-primary">${Resource.msg('button.form.emailsignup', 'homePage', null)}</button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-sm-7 email-description">${Resource.msg('description.form.emailsignup', 'homePage', null)}</div>
+                </div>
+            </form>
+        </div>
+    </div>
+</isdecorate>
+
