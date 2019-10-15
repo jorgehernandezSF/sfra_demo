@@ -1,0 +1,21 @@
+{
+  "name": "sfra_demo",
+  "version": "0.0.1",
+  "description": "SFRA demo cartridge",
+  "main": "index.js",
+  "scripts": {
+    "compile:js": "sgmf-scripts --compile js",
+    "upload": "sgmf-scripts --upload",
+    "uploadCartridge": "sgmf-scripts --uploadCartridge sfra_demo",
+    "watch": "sgmf-scripts --watch",
+    "watch:static": "sgmf-scripts --watch static"
+  },
+  "author": "Jorge Hernandez",
+  "license": "MIT",
+  "devDependencies": {
+    "sgmf-scripts": "^2.3.0"
+  },
+  "paths": {
+    "base": "../storefront-reference-architecture/cartridges/app_storefront_base/"
+  }
+}
