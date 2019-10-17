@@ -22,7 +22,7 @@ server.append('Show', cache.applyCustomCache, function (req, res, next) {
     var viewData = res.getViewData();
     viewData = {
         demo1: 'this homepage is using custom cache middleware',
-        demo2: res.cachePeriod + '' + res.cachePeriodUnit
+        demo2: res.cachePeriod + ' ' + res.cachePeriodUnit
     };
     res.setViewData(viewData);
     next();

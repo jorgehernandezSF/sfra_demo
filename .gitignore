@@ -1,0 +1,10 @@
+node_modules/
+coverage/
+cartridges/*/cartridge/static/
+npm-debug.log
+cartridges.zip
+.idea/
+dw.json
+.DS_Store
+tmp/
+test/integration/config.json

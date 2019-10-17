@@ -10,10 +10,11 @@ exports.send = function (customerEmail, templateContext) {
     var context = new HashMap();
     var email = new Mail();
     var template = new Template('/newsletter/confirmationEmail');
+    var content = template.render(context).text;
 
     email.addTo(customerEmail);
     email.setFrom(Site.current.getCustomPreferenceValue('customerServiceEmail') || 'no-reply@salesforce.com');
     email.setSubject(Resource.msg('newsletter.confirmation.subject', 'newsletter', null));
-    email.setContent(template.render(context).text, 'text/html', 'UTF-8');
+    email.setContent(content, 'text/html', 'UTF-8');
     email.send();
 }
