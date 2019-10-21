@@ -3,8 +3,11 @@
 var base = require('base/product/base');
 var detail = require('base/product/detail');
 
+//This function is on base, but not exported: copied and updated to use new ATS value in model
 function updateAvailability(response, $productContainer) {
     var availabilityValue = '';
+    
+    //The following line contains the new ATS value from the updated model
     var availabilityMessages = response.product.ats.messages;
 
     if (!response.product.readyToOrder) {
@@ -23,6 +26,7 @@ function updateAvailability(response, $productContainer) {
     });
 }
 
+//This function is on base, but not exported: copied here with no changes. It calls updateAvailability
 function handleVariantResponse(response, $productContainer) {
     var isChoiceOfBonusProducts =
         $productContainer.parents('.choose-bonus-product-dialog').length > 0;
@@ -74,7 +78,7 @@ function handleVariantResponse(response, $productContainer) {
         .html(getAttributesHtml(response.product.attributes));
 }
 
-// This is exported in the base.js of storefront base cartridge
+//This function is exported on base.js of storefront base cartridge
 function attributeSelect(selectedValueUrl, $productContainer) {
     if (selectedValueUrl) {
         $('body').trigger('product:beforeAttributeSelect',
@@ -98,7 +102,9 @@ function attributeSelect(selectedValueUrl, $productContainer) {
     }
 }
 
+//Override base with this attributeSelect function
 base.attributeSelect = attributeSelect;
-var exportDetails = $.extend({}, detail);
+//Create a new function, extend it with base and detail 
+var exportDetails = $.extend({}, base, detail);
 
 module.exports = exportDetails;

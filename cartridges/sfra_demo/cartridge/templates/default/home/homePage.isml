@@ -5,8 +5,8 @@
         assets.addCss('/css/homePage.css');
     </isscript>
 
-	Demo 1: <p>${pdict.demo1}</p>
-	Demo 2: <p>${pdict.demo2}</p>
+	<p>Demo 1: ${pdict.demo1}</p>
+	<p>Demo 2: ${pdict.demo2}</p>
 
     <!-- +1.888.555.0199 --><!--This phone is a requirement to support existing Gomez monitor of SiteGenesis. Demadware customers can remove this.-->
     <div class="home-main homepage">
