@@ -10,7 +10,7 @@ server.append('Show', function (req, res, next) {
     var viewData = res.getViewData();
     viewData = {
         demo1: 'sfra_demo cartridge append happening',
-        demo2: 'this is the value overriden by the append'
+        demo2: 'this is the value overridden by the append'
     };
     res.setViewData(viewData);
     next();
@@ -19,8 +19,7 @@ server.append('Show', function (req, res, next) {
 
 /*** Demo for extending a script *******/
 server.append('Show', cache.applyCustomCache, function (req, res, next) {
-    var viewData = res.getViewData();
-    viewData = {
+    var viewData = {
         demo1: 'this homepage is using custom cache middleware',
         demo2: res.cachePeriod + ' ' + res.cachePeriodUnit
     };
