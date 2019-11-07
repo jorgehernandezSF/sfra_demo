@@ -1,7 +1,8 @@
 # README #
 # sfra_demo
 
-This is a sample repository that supports the Fast Path to B2C Developer Certification.  This program is available in the Partner Community.
+This is a sample repository that complements the Fast Path to B2C Developer Certification.  This program is available in the Partner Community (https://partners.salesforce.com/_ui/core/chatter/groups/GroupProfilePage?g=0F93A000000HYcs.
+
 The goal is to provide sample files to showcase key concepts used in Storefront Reference Application (SFRA), Page Designer, Jobs Framework and OCAPI.
 
 The examples cover these areas:
