@@ -1,0 +1,49 @@
+{
+  "step-types":
+  {
+    "script-module-step":
+    [
+      {
+        "@type-id":"custom.DeleteCustomObjects",
+        "@supports-parallel-execution":"false",
+        "@supports-site-context":"true",
+        "@supports-organization-context":"false",
+        "description":"This script deletes all custom object for a given type. It runs in site scope.",
+        "module":"sfra_demo/cartridge/scripts/steps/deleteCustomObjects.js",
+        "function":"deleteCOs",
+        "transactional":"true",
+        "timeout-in-seconds":"900",
+        "parameters":
+        {
+          "parameter":
+          [
+            {
+              "@name":"CustomObjectType",
+              "@type":"string",
+              "@required":"true",
+              "description":"The Custom Object type to delete instances on this site."
+            }
+          ]
+        },
+        "status-codes": 
+        {
+          "status": 
+          [
+              {
+                  "@code": "ERROR",
+                  "description": "Used when the step failed with an error."
+              },
+              {
+                  "@code": "FINISHED",
+      			  "description": "Used when the step finished successfully."
+              },
+              {
+                  "@code": "FINISHED_WITH_WARNINGS",
+      			  "description": "Used when the step finished with warnings."
+              }
+          ]
+        }
+      }
+    ]
+  }
+}

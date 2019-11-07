@@ -1,0 +1,43 @@
+{
+  "name": "Product Top Seller",
+  "description": "Image, text overlay, 'Shop Now' control that links user to a PDP of the best selling product in a category; Image is defined by the selected product",
+  "group": "my_assets",
+  "attribute_definition_groups": [
+	{
+	  "id": "search_params",
+	  "name": "Search Parameters",
+	  "description": "Please select a category to search for a top seller.",
+	  "attribute_definitions": [
+	    {
+	      "id": "category",
+	      "name": "Storefront Catalog Category",
+	      "description": "Please select a storefront catalog category to get its top selling product.",
+          "type": "category",
+	      "required": true
+	    }
+	  ]
+	},
+	{
+	  "id": "editorial_copy",
+	  "name": "Editorial Copy",
+	  "description": "Please specify the editorial copy that will be displayed to customers when this tile is published.",
+	  "attribute_definitions": [
+	    {
+	      "id": "headline",
+	      "name": "Optional Heading",
+	      "description": "Optionally, specify text copy to include in the tile display.  The default is the product name.",
+	      "type": "string",
+	      "required": false
+	    },
+	    {
+          "id": "promotion_message",
+          "name": "Optional Promotion Message",
+          "description": "Optionally, specify the promotion text (i.e. message and coupon code) to show below the heading.",
+          "type": "string",
+          "required": false
+        }
+	  ]
+	}
+  ],
+  "region_definitions": []
+}

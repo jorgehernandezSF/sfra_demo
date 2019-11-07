@@ -1,0 +1,25 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/producttile.css');
+    assets.addCss('/css/component.css');
+</isscript>
+<figure class="component-figure product_centered-text">
+    <picture>
+        <isif condition="${pdict.image}">
+            <img class="component-image" src="${pdict.image.src}" <isif condition="${pdict.image.alt}">alt="${pdict.image.alt}" title="${pdict.image.alt}"</isif> />
+        </isif>
+    </picture>
+    <figcaption class="product-text_container">
+        <div>
+            <span class="product-text"><isprint value="${pdict.headline}"/></span>
+        </div>
+        <isif condition="${pdict.promotion_message}">
+	        <div>
+	            <span class="product-text"><isprint value="${pdict.promotion_message}"/></span>
+	        </div>
+        </isif>
+        <div>
+            <a class="producttile-button" href="${pdict.url}">${Resource.msg('button.shop_now', 'topsellertile', null)}</a>
+        </div>
+    </figcaption>
+</figure>
