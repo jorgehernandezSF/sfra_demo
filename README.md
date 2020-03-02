@@ -17,7 +17,7 @@ The examples cover these areas:
 9. Transaction handling in controller (saves data to persistent CO)
 10. Use of a middleware event in controller: route:BeforeComplete
 11. Use of Logger class to log an error when CO has not been defined
-12 Use of steptypes.json to define a custom job step
+12. Use of steptypes.json to define a custom job step
 13. Custom script specified in steptypes.json that deletes COs for a given CO type
 
 # Getting Started
