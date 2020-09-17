@@ -3,15 +3,11 @@
 var server = require('server');
 var cache = require('*/cartridge/scripts/middleware/cache');
 
-server.extend(module.superModule);
-'use strict';
-
-var server = require('server');
 //extend Home controller functionality using the extend method
 server.extend(module.superModule);
 
 //insert functionality before the Show route using server.prepend
-server.prepend('Show', function (req, res, next) {
+server.prepend('Show', cache.applyDefaultCache, function (req, res, next) {
 	var viewData = res.getViewData();
 	viewData.param1 = 'This is from prepend';
 	res.setViewData(viewData);

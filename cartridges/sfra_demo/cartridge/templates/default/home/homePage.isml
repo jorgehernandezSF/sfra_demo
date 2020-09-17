@@ -5,8 +5,8 @@
         assets.addCss('/css/homePage.css');
     </isscript>
 
-	<p>Demo of prepend and append modifying viewData: ${pdict.param1}</p>
-	<p>Demo of extending cache.js (middleware script): ${pdict.param2}</p>
+	<p>Use of prepend/append/replace using viewData: ${pdict.param1}</p>
+	<p>Use of extending cache.js (middleware script): ${pdict.param2}</p>
 
     <!-- +1.888.555.0199 --><!--This phone is a requirement to support existing Gomez monitor of SiteGenesis. Demadware customers can remove this.-->
     <div class="home-main homepage">
