@@ -11,25 +11,25 @@ function updateAvailability(e, response) {
 	        availabilityValue += '<li><div>' + message + '</div></li>';
 	    });
 	}
-	
+
 	$('div.availability', response.$productContainer)
 	    .data('ready-to-order', response.product.readyToOrder)
 	    .data('available', response.product.available);
-	
+
 	$('.availability-msg', response.$productContainer)
 	    .empty().html(availabilityValue);
-	
+
 	if ($('.global-availability').length) {
 	    var allAvailable = $('.product-availability').toArray()
 	        .every(function (item) { return $(item).data('available'); });
-	
+
 	    var allReady = $('.product-availability').toArray()
 	        .every(function (item) { return $(item).data('ready-to-order'); });
-	
+
 	    $('.global-availability')
 	        .data('ready-to-order', allReady)
 	        .data('available', allAvailable);
-	
+
 	    $('.global-availability .availability-msg').empty()
 	        .html(allReady ? response.message : response.resources.info_selectforstock);
 	}

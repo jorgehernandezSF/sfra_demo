@@ -13,7 +13,7 @@
   "author": "Jorge Hernandez",
   "license": "MIT",
   "devDependencies": {
-    "sgmf-scripts": "^2.3.0"
+    "sgmf-scripts": "^2.4.1"
   },
   "paths": {
     "base": "../storefront-reference-architecture/cartridges/app_storefront_base/"

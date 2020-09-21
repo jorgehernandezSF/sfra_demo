@@ -1,9 +1,9 @@
 # README #
 # sfra_demo
 
-This is a sample repository that complements the Fast Path to B2C Developer Certification.  This program is available in <a href="https://partners.salesforce.com/_ui/core/chatter/groups/GroupProfilePage?g=0F93A000000HYcs">this Partner Community chatter group.</a>
+This is a sample repository that complements the Fast Path to B2C Developer Certification. This program is available in the Partner Community Learning Path (https://partnernavigator.salesforce.com/s/b2ccommerce?step=2), with a corresponding Fast Path to B2C Commerce chatter group in the Partner Community.
 
-The goal is to provide sample files to showcase key concepts used in Storefront Reference Application (SFRA), Page Designer, Jobs Framework and OCAPI.
+The goal is this demo cartridge to provide sample files to showcase key concepts used in Storefront Reference Application (SFRA), Page Designer, Jobs Framework and OCAPI.
 
 The examples cover these areas:
 1. Extending controllers, models and scripts
@@ -11,7 +11,7 @@ The examples cover these areas:
 3. B2C Commerce form definition: newsletter.xml
 4. Form ISML using attributes from the form definition
 5. Form client-side javascript to submit form to controller and handle errors back from controller
-6. Controller to show a form, handle submission coming from client-side, and sending back results to the client-side 
+6. Controller to show a form, handle submission coming from client-side, and sending back results to the client-side
 7. Implementation of CSRF (Cross Site Request Forgery) protection in controller and ISML file
 8. Custom object (aka CO) creation (requires import of CO metadata, which is included)
 9. Transaction handling in controller (saves data to persistent CO)
@@ -30,8 +30,8 @@ The examples cover these areas:
 6. In Business Manager, add sfra_demo to your site's cartridge path. The path must contain this cartridge in front of  app_storefront_base (which comes with SFRA).  Example: sfra_demo:app_storefront_base
 7. In Business Manager, under Administration > Site Development > Import & Export, upload and import the newslettersubscription_co_metadata.xml.  This CO definition is required for the demo to work.
 8. On a browser, invoke the Newsletter-Show route for in your site.  For example: https://<your_sandbox>/on/demandware.store/Sites-<your_site>-Site/en_US/Newsletter-Show.
-9. To demonstrate a custom job step, add the sfra_demo cartridge to the Business Manager site cartridge path. 
-   a. Create a new job using Administration -> Operations -> Jobs 
+9. To demonstrate a custom job step, add the sfra_demo cartridge to the Business Manager site cartridge path:  
+   a. Create a new job using Administration -> Operations -> Jobs
    b. Configure a job step: in the drop-down of steps, choose the custom.DeleteCustomObjects and provide the appropriate parameter.
 
 # Compiling your application
